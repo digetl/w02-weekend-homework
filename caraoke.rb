@@ -1,4 +1,4 @@
-class Careoke
+class Caraoke
 
     attr_reader :name, :rooms
 
