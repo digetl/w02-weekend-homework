@@ -34,14 +34,19 @@ class TestCaraoke < MiniTest::Test
         # room2 = [songlist2, songlist3]
         # room3 = [songlist1, songlist4]
 
-        @rooms = [room1]
+        rooms = [room1]
 
-        @caraoke = Caraoke.new("CCCs Caraoke Club", 3)
+        @caraoke = Caraoke.new("CCCs Caraoke Club", rooms)
     end
 
     def test_caraoke_name
         assert_equal("CCCs Caraoke Club", @caraoke.name())
     end
+
+    def test_caraoke_number_of_rooms
+        assert_equal(1, @caraoke.rooms.count)
+    end
+
 
 
 end
