@@ -1,8 +1,12 @@
-require( 'minitest/autorun' )
+require('minitest/autorun' )
 require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
+require_relative( '../rooms' )
+require_relative( '../guests' )
+require_relative( '../songs' )
 require_relative( '../careoke' )
+
 class TestCareoke < MiniTest::Test
 
     def setup
@@ -37,7 +41,7 @@ class TestCareoke < MiniTest::Test
 
     def test_careoke_name
         assert_equal("CCCs Careoke Club", @careoke.name())
-      end
+    end
 
 
 end
