@@ -5,12 +5,12 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 require_relative( '../rooms' )
 require_relative( '../guests' )
 require_relative( '../songs' )
-require_relative( '../careoke' )
+require_relative( '../caraoke' )
 
 class TestSongs < MiniTest::Test
 
     def setup
-        
+
         song1 = {title: "Jolene", artist: "Dolly Parton", genre: "Country and Western"}
         song2 = {title: "Take me home, country road", artist: "John Denver", genre: "Country and Western"}
         song3 = {title: "Witicha Lineman", artist: "Glen Campbell", genre: "Country and Western"}
@@ -36,7 +36,7 @@ class TestSongs < MiniTest::Test
 
         @rooms = [room1]
 
-        @careoke = Careoke.new("CCCs Careoke Club", 3)
+        @caraoke = Caraoke.new("CCCs Caraoke Club", 3)
     end
 
 

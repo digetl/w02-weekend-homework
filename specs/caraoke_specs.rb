@@ -36,7 +36,7 @@ class TestCaraoke < MiniTest::Test
 
         @rooms = [room1]
 
-        @careoke = Careoke.new("CCCs Careoke Club", 3)
+        @caraoke = Caraoke.new("CCCs Caraoke Club", 3)
     end
 
     def test_caraoke_name
