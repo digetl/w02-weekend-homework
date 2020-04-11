@@ -25,22 +25,29 @@ class TestRooms < MiniTest::Test
         song12 = {title: "Witicha Lineman", artist: "Glen Campbell", genre: "Country and Western"}
 
 
-        songlist1 = [song1, song2, song3]
-        songlist2 = [song4, song5, song6]
-        # @songlist3 = [song7, song8, song9]
-        # @songlist4 = [song10, song11, song12]
+        song_list1 = [song1, song2, song3]
+        song_list2 = [song4, song5, song6]
+        song_list3 = [song7, song8, song9]
+        song_list4 = [song10, song11, song12]
 
-        room1 = [name, songlist1, songlist2]
-        # room2 = [name, songlist2, songlist3]
-        # room3 = [name, songlist1, songlist4]
+        rooms_singular = [@room1]
+        rooms_many = [@room1, @room2]
 
-        # @rooms = [room1]
-        @room1 = Rooms.new("Room1")
-        @careoke = Caraoke.new("CCCs Caraoke Club", 3)
+        @caraoke = Caraoke.new("CCCs Caraoke Club", rooms_singular)
+        @caraoke_multi_room = Caraoke.new("CCCs Caraoke Club", rooms_many)
+        @room1 = Rooms.new("Country and Western", song_list1)
+        @song1 = Song.new("Jolene", "Dolly Parton", "Country and Western")
+
     end
 
     def test_room_name
-        assert_equal("Room1", @room1.name())
+        assert_equal("Country and Western", @room1.name())
     end
+    
+    def test_room_songs
+        assert_equal(song_list1, @room1.song_list1())
+    end
+
+
 
 end

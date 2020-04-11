@@ -28,18 +28,20 @@ def setup
     song12 = {title: "Witicha Lineman", artist: "Glen Campbell", genre: "Country and Western"}
 
 
-    songlist1 = [song1, song2, song3]
-    songlist2 = [song4, song5, song6]
+    song_list1 = [song1, song2, song3]
+    song_list2 = [song4, song5, song6]
     # @songlist3 = [song7, song8, song9]
     # @songlist4 = [song10, song11, song12]
 
-    room1 = [songlist1, songlist2]
+    room1 = [song_list1, song_list2]
     # room2 = [songlist2, songlist3]
     # room3 = [songlist1, songlist4]
 
     @rooms = [room1]
 
     @careoke = Careoke.new("CCCs Careoke Club", 3)
+    @song1 = Song.new("Jolene", "Dolly Parton", "Country and Western")
+
 
 def test_guest_name
 

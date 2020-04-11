@@ -25,28 +25,36 @@ class TestCaraoke < MiniTest::Test
         song12 = {title: "Witicha Lineman", artist: "Glen Campbell", genre: "Country and Western"}
 
 
-        songlist1 = [song1, song2, song3]
-        songlist2 = [song4, song5, song6]
-        # @songlist3 = [song7, song8, song9]
-        # @songlist4 = [song10, song11, song12]
+        song_list1 = [song1, song2, song3]
+        song_list2 = [song4, song5, song6]
+        song_list3 = [song7, song8, song9]
+        song_list4 = [song10, song11, song12]
 
-        room1 = [songlist1, songlist2]
-        # room2 = [songlist2, songlist3]
+        room1 = [song_list1, song_list2]
+        room2 = [song_list2, song_list3]
         # room3 = [songlist1, songlist4]
 
-        rooms = [room1]
+        rooms_singular = [room1]
+        rooms_many = [room1, room2]
 
-        @caraoke = Caraoke.new("CCCs Caraoke Club", rooms)
+        @caraoke = Caraoke.new("CCCs Caraoke Club", rooms_singular)
+        @caraoke_multi_room = Caraoke.new("CCCs Caraoke Club", rooms_many)
+        @room1 = Rooms.new("Country and Western", song_list1)
+        @song1 = Song.new("Jolene", "Dolly Parton", "Country and Western")
+
     end
 
     def test_caraoke_name
         assert_equal("CCCs Caraoke Club", @caraoke.name())
     end
 
-    def test_caraoke_number_of_rooms
+    def test_caraoke_number_of_rooms__singular
         assert_equal(1, @caraoke.rooms.count)
     end
 
+    def test_caraoke_number_of_rooms__plural
+        assert_equal(2, @caraoke_multi_room.rooms.count)
+    end
 
 
 end

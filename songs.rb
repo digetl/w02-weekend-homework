@@ -1,9 +1,9 @@
-class Songs
+class Song
 
-    attr_reader :name, :artist, :genre
+    attr_reader :title, :artist, :genre
 
-    def initialize(name, artist, genre)
-        @name = name
+    def initialize(title, artist, genre)
+        @title = title
         @artist = artist
         @genre = genre
         @play_count = 0
