@@ -31,6 +31,11 @@ class TestGuests < MiniTest::Test
         assert_equal("Tam", @guest1.name)
     end
 
+    def test_guest_fave_song
+        assert_equal("Witicha Lineman", @guest2.fave_song)
+    end
+
+
 
 
 end
