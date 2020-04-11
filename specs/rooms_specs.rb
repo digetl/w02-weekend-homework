@@ -14,6 +14,10 @@ class TestRooms < MiniTest::Test
         @song1 = Song.new("Jolene", "Dolly Parton", "Country and Western")
         @song2 = Song.new("Witicha Lineman", "Glen Campbell", "Country and Western")
         @song3 = Song.new("Take me home, country road", "John Denver", "Country and Western")
+        
+        @song4 = Song.new("The Gambler", "Kenny Rogers", "Country and Western")
+        @song5 = Song.new("Islands in the stream", "Dolly Parton", "Country and Western")
+        @song6 = Song.new("Crazy", "Patsy Cline", "Country and Western")
 
         @room1 = Room.new("Daves Room")
         @room2 = Room.new("Kirstys Room")
@@ -24,6 +28,8 @@ class TestRooms < MiniTest::Test
         @guest1 = Guest.new("Tam", "Jolene")
         @guest2 = Guest.new("Sam", "Witicha Lineman")
         @guest3 = Guest.new("Ben", "Take me home, country road")
+
+
     end
 
     def test_room_name

@@ -19,7 +19,7 @@ class TestCaraoke < MiniTest::Test
         @room2 = Room.new("Kirstys Room")
         @room3 = Room.new("Ethans Room")
     
-        @caraoke = Caraoke.new("CCCs Caraoke Club", @room1)
+        @caraoke = Caraoke.new("CCCs Caraoke Club")
     
         @guest1 = Guest.new("Tam", "Jolene")
         @guest2 = Guest.new("Sam", "Witicha Lineman")
@@ -30,5 +30,11 @@ class TestCaraoke < MiniTest::Test
     def test_caraoke_name
         assert_equal("CCCs Caraoke Club", @caraoke.name())
     end
+
+    def test_add_room_to_club__one
+        @caraoke.add_room_to_club(@room1)
+        assert_equal(1, @caraoke.check_room_count())
+    end
+
 
 end
