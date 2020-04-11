@@ -27,12 +27,12 @@ class TestRooms < MiniTest::Test
     end
 
     def test_room_name
-        assert_equal("Country and Western", @room1.name())
+        assert_equal("Daves Room", @room1.name())
     end
     
-    def test_room_songs
-        assert_equal(song_list1, @room1.song_list1())
-    end
+    # def test_room_songs
+    #     assert_equal(song_list1, @room1.song_list1())
+    # end
 
 
 
