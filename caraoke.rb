@@ -1,10 +1,9 @@
 class Caraoke
 
-    attr_reader :name, :rooms
+    attr_reader :name
 
-    def initialize(name, rooms)
+    def initialize(name)
         @name = name
-        @rooms = rooms
     end
 
 

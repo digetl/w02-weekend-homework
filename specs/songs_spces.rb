@@ -11,10 +11,22 @@ class TestSongs < MiniTest::Test
 
     def setup
         @song1 = Song.new("Jolene", "Dolly Parton", "Country and Western")
+        @song2 = Song.new("Witicha Lineman", "Glen Campbell", "Country and Western")
+        @song3 = Song.new("Take me home, country road", "John Denver", "Country and Western")
+
+        @room1 = Room.new("Daves Room")
+        @room2 = Room.new("Kirstys Room")
+        @room3 = Room.new("Ethans Room")
+    
+        @caraoke = Caraoke.new("CCCs Caraoke Club")
+    
+        @guest1 = Guest.new("Tam", "Jolene")
+        @guest2 = Guest.new("Sam", "Witicha Lineman")
+        @guest3 = Guest.new("Ben", "Take me home, country road")
+    
     end
 
     def song_list_test()
-
         assert_equal("Jolene", @song1.title)
     end
 
