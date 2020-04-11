@@ -26,7 +26,7 @@ class TestSongs < MiniTest::Test
     
     end
 
-    def song_list_test()
+    def test_song_title()
         assert_equal("Jolene", @song1.title)
     end
 
