@@ -36,5 +36,12 @@ class TestCaraoke < MiniTest::Test
         assert_equal(1, @caraoke.check_room_count())
     end
 
+    def test_add_room_to_club__two
+        @caraoke.add_room_to_club(@room1)
+        @caraoke.add_room_to_club(@room2)
+        assert_equal(2, @caraoke.check_room_count())
+    end
+
+
 
 end
