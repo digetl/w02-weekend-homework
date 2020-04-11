@@ -18,7 +18,7 @@ class TestSongs < MiniTest::Test
         @room2 = Room.new("Kirstys Room")
         @room3 = Room.new("Ethans Room")
     
-        @caraoke = Caraoke.new("CCCs Caraoke Club")
+        @caraoke = Caraoke.new("CCCs Caraoke Club", @room3)
     
         @guest1 = Guest.new("Tam", "Jolene")
         @guest2 = Guest.new("Sam", "Witicha Lineman")
@@ -30,7 +30,8 @@ class TestSongs < MiniTest::Test
         assert_equal("Jolene", @song1.title)
     end
 
-    
-
+    def test_song_artist()
+        assert_equal("Glen Campbell", @song1.artist)
+    end
 
 end
