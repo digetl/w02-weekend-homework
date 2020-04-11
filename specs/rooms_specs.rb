@@ -52,6 +52,9 @@ class TestRooms < MiniTest::Test
         assert_equal([], @room1.room_playlist)
     end
 
-
+    def test_room_playlist_is_not_empty
+        @room1.add_song_to_room_playlist(@song1)
+        assert_equal(1, @room1.room_playlist.count())
+    end
 
 end
