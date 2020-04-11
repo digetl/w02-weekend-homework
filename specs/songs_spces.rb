@@ -31,7 +31,10 @@ class TestSongs < MiniTest::Test
     end
 
     def test_song_artist()
-        assert_equal("Glen Campbell", @song1.artist)
+        assert_equal("Glen Campbell", @song2.artist)
     end
 
+    def test_song_genre()
+        assert_equal("Country and Western", @song3.genre)
+    end
 end
