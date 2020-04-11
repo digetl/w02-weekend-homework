@@ -1,6 +1,6 @@
 class Room
 
-    attr_reader :name, :guests
+    attr_reader :name, :guests, :room_playlist
 
     def initialize(name)
         @name = name
@@ -16,6 +16,7 @@ class Room
     def check_guest_count
        return @guests.count
     end
+
 
 
 

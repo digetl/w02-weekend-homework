@@ -23,7 +23,7 @@ class TestRooms < MiniTest::Test
         @room2 = Room.new("Kirstys Room")
         @room3 = Room.new("Ethans Room")
     
-        @caraoke = Caraoke.new("CCCs Caraoke Club", @room2)
+        @caraoke = Caraoke.new("CCCs Caraoke Club")
     
         @guest1 = Guest.new("Tam", "Jolene")
         @guest2 = Guest.new("Sam", "Witicha Lineman")
@@ -48,7 +48,9 @@ class TestRooms < MiniTest::Test
         assert_equal(3, @room1.check_guest_count())
     end
 
-
+    def test_room_playlist_empty
+        assert_equal([], @room1.room_playlist)
+    end
 
 
 
