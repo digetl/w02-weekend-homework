@@ -21,6 +21,10 @@ class Room
         @room_playlist.push(song)
     end
 
+    def check_room_max_number_of_occupants
+        return false if @guests.count <=3
+    end
+
 
 
 end

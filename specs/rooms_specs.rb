@@ -29,6 +29,14 @@ class TestRooms < MiniTest::Test
         @guest2 = Guest.new("Sam", "Witicha Lineman")
         @guest3 = Guest.new("Ben", "Take me home, country road")
 
+        @guest4 = Guest.new("Don", "Jolene")
+        @guest5 = Guest.new("Ron", "Witicha Lineman")
+        @guest6 = Guest.new("Sonny", "Take me home, country road")
+
+        @guest7 = Guest.new("Bill", "Jolene")
+        @guest8 = Guest.new("William", "Witicha Lineman")
+        @guest9 = Guest.new("Shuggie", "Take me home, country road")
+
 
     end
 
@@ -78,5 +86,11 @@ class TestRooms < MiniTest::Test
         @room1.add_guest_to_room(@guest2)
         assert_equal(2, @room1.guests.count())
     end
+
+    def test_check_room_max_number_of_occupants__not_full
+        assert_equal(false, @room1.check_room_max_number_of_occupants)
+    end
+
+
 
 end
