@@ -10,7 +10,10 @@ class Room
     end
 
     def add_guest_to_room(guest)
+        return if check_room_too_full?()
+        p "Welcome guest"
         @guests.push(guest)
+     
     end
 
     def check_guest_count
@@ -21,7 +24,7 @@ class Room
         @room_playlist.push(song)
     end
 
-    def check_room_max_number_of_occupants
+    def check_room_too_full?()
         return false if @guests.count <=3
         return true if @guests.count >=4
     end

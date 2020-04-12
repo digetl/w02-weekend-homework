@@ -88,7 +88,7 @@ class TestRooms < MiniTest::Test
     end
 
     def test_check_room_max_number_of_occupants__not_full
-        assert_equal(false, @room1.check_room_max_number_of_occupants)
+        assert_equal(false, @room1.check_room_too_full?)
     end
 
     def test_check_in_guest_to_room__full
@@ -98,7 +98,18 @@ class TestRooms < MiniTest::Test
         @room1.add_guest_to_room(@guest4)
         @room1.add_guest_to_room(@guest5)
         @room1.add_guest_to_room(@guest6)
-        assert_equal(true, @room1.check_room_max_number_of_occupants)
+        assert_equal(true, @room1.check_room_too_full?)
+    end
+
+    def test_check_if_room_full_no_more_guests_allowed
+        @room1.add_guest_to_room(@guest1)
+        @room1.add_guest_to_room(@guest2)
+        @room1.add_guest_to_room(@guest3)
+        @room1.add_guest_to_room(@guest4)
+        @room1.add_guest_to_room(@guest5)
+        assert_equal(4, @room1.guests.count())
+
+
     end
 
 
