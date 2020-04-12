@@ -23,6 +23,7 @@ class Room
 
     def check_room_max_number_of_occupants
         return false if @guests.count <=3
+        return true if @guests.count >=4
     end
 
 

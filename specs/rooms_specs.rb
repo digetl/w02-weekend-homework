@@ -91,6 +91,16 @@ class TestRooms < MiniTest::Test
         assert_equal(false, @room1.check_room_max_number_of_occupants)
     end
 
+    def test_check_in_guest_to_room__full
+        @room1.add_guest_to_room(@guest1)
+        @room1.add_guest_to_room(@guest2)
+        @room1.add_guest_to_room(@guest3)
+        @room1.add_guest_to_room(@guest4)
+        @room1.add_guest_to_room(@guest5)
+        @room1.add_guest_to_room(@guest6)
+        assert_equal(true, @room1.check_room_max_number_of_occupants)
+    end
+
 
 
 end
