@@ -108,8 +108,15 @@ class TestRooms < MiniTest::Test
         @room1.add_guest_to_room(@guest4)
         @room1.add_guest_to_room(@guest5)
         assert_equal(4, @room1.guests.count())
+    end
 
-
+    def test_guest_leaves_room
+        @room1.add_guest_to_room(@guest1)
+        @room1.add_guest_to_room(@guest2)
+        @room1.add_guest_to_room(@guest3)
+        @room1.add_guest_to_room(@guest4)
+        @room1.guest_leaves_room(@guest2)
+        assert_equal(3, @room1.guests.count)
     end
 
 

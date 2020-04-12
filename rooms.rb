@@ -29,6 +29,11 @@ class Room
         return true if @guests.count >=4
     end
 
+    def guest_leaves_room(guest)
+        @guests.delete(guest)
+    end
+
+
 
 
 end
