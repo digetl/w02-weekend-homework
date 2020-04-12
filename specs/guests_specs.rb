@@ -41,6 +41,11 @@ class TestGuests < MiniTest::Test
         assert_equal(100, @guest21.wallet())
     end
 
+    def test_guest_is_skint
+    @guest22 = Guest.new("Barbie", "Jolene")
+    assert_equal(0, @guest22.wallet)
+    end
+
 
 
 
