@@ -12,5 +12,7 @@ class Guest
         @wallet += money
     end
 
+   
+
 
 end

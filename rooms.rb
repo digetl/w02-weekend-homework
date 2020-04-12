@@ -33,6 +33,10 @@ class Room
         @guests.delete(guest)
     end
 
+    def check_if_guest_can_pay_fee(guest)
+        return true if guest.wallet >10
+    end
+
 
 
 
