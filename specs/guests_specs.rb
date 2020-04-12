@@ -35,6 +35,13 @@ class TestGuests < MiniTest::Test
         assert_equal("Witicha Lineman", @guest2.fave_song)
     end
 
+    def test_add_money_to_guests_wallet
+        @guest21 = Guest.new("Ken", "Jolene")
+        @guest21.add_money_to_guests_wallet(100)
+        assert_equal(100, @guest21.wallet())
+    end
+
+
 
 
 
